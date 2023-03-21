@@ -1,0 +1,115 @@
+<?php
+session_start();
+if (!$_SESSION['user']) {
+    header('Location: /');
+}
+?>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>PhotoDay</title>
+	<link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+    <meta name="author" content="Алмаз Сагиров">
+    <meta name="description" content="Сайт">
+    <link rel="stylesheet" href="main.css">
+    <meta charset="utf-8">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <script src="https://timeplan.me/js/timeplanme_integration.min.js"></script>
+</head>
+<body>
+    <div class="header">
+     <div class="high">
+        <div class="hight-nav">
+            <a class="hight-nav-item" href="tel:+79534964431"> <img src="Img\icons\phone.png" style="width: 14px" /> +7(953)-496-44-31</a>
+            <a class="hight-nav-item" href="#map"> <img src="Img\icons\map.png" style="width: 14px" />    г. Наб. Челны, пр. Мусы Джалиля, 12</a>
+            <a class="hight-nav-item" href="skype:genius.gell35?chat"> <img src="Img\icons\skype.png" style="width: 14px" />   ukitskype</a>
+            <a class="hight-nav-item" href="mailto:genius.gell35@gmail.com"> <img src="Img\icons\letter.png" style="width: 14px" />   support@ukit.com</a>
+            <div class="socium">
+                <a class="soc" href="https://vk.com/"><img src="Img\vk.png" style="width: 14px" /></a>
+                <a class="soc1" href="https://twitter.com/?lang=ru"><img src="Img\twitter.png" style="width: 14px" /></a>
+                <a class="soc2" href="https://www.instagram.com/"><img src="Img\instagram.png" style="width: 14px" /></a>
+                <a class="hight-nav-item" href="profile.php">  <?= $_SESSION['user']['full_name'] ?></a>
+
+                <a class="hight-nav-item" href="vendor/logout.php" >Выход</a></a>
+
+
+
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="header">
+        <div class=" container">
+            <div class="header-line">
+                <div class="header-logo">
+                   <a href="profile.php"><img src="Img\logo.jpg"></a>
+                </div>
+
+                <div class='nav' style="margin-bottom: 5px;">
+                    <a class='nav-item' href="profile.php" >ГЛАВНАЯ</a>
+                    <a class='nav-item' href="#price">УСЛУГИ</a>
+                    <a class='nav-item' href="service.php">ПРАЙС</a>
+                    <a class='nav-item' href="#port">ПОРТФОЛИО</a>
+                    <a class='nav-item' href="news.php">НОВОСТИ</a>
+                    <a href="jopa.html" style=" text-decoration: none; color: #000000;text-decoration: none;transition: color 0.3s linear;;">ЗАПИСАТЬСЯ</a>
+                    <a class='nav-item' href="otz.html" style="padding-left: 35px;">ОТЗЫВЫ</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="mc-review" style="padding-top: 7%"></div>
+<script type="text/javascript">
+cackle_widget = window.cackle_widget || [];
+cackle_widget.push({widget: 'Review', id: 80080});
+(function() {
+    var mc = document.createElement('script');
+    mc.type = 'text/javascript';
+    mc.async = true;
+    mc.src = ('https:' == document.location.protocol ? 'https' : 'http') + '://cackle.me/widget.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(mc, s.nextSibling);
+})();
+</script>
+
+<div class="footer">
+
+    <div class="about"  style="width: 33.33333333%; z-index: 5; padding-top: 35px;"><h2 >Немного о нас </h2><br>Приглашаем вас ознакомиться с нашим портфолио и подарить себе незабываемые впечатления, воспользовавшись нашими услугами.</div>
+
+    <div class="cont" id="co" style="width: 33.33333333%;"><h2 class="h21">Контакты</h2><br>
+        <ul>
+            <li><a class="hight-nav-item" href="tel:+79534964431" style="padding-bottom: 15px" > <img src="Img\icons\phone.png" style="width: 14px; " />  +7(953)-496-44-31 </a></li>            
+            <li><a class="hight-nav-item" href="#map"> <img src="Img\icons\map.png" style="width: 14px" /> г. Наб. Челны, пр. Мусы Джалиля, 12</a></li>
+            <li><a class="hight-nav-item" href="skype:genius.gell35?chat"> <img src="Img\icons\skype.png" style="width: 14px" />ukitskype</a></li>
+            <li><a class="hight-nav-item" href="mailto:genius.gell35@gmail.com"> <img src="Img\icons\letter.png" style="width: 14px" />   support@ukit.com</a></li>
+        </ul>
+   
+    </div>
+
+        <form style="" name="form" action="mail.php" method="post" id="form_message">
+        <h2 style="text-align: left; ">Напиши мне(угроза)</h2><br>
+
+        <p> <div class="titles"></div> <input class="input" name="name" type="text" placeholder="Ваше имя*"/> </p>
+
+        <p> <div class="titles"></div> <input class="input" name="email" type="text" placeholder="E-mail" /> </p>
+
+        <p> <div class="titles"></div> <input class="input" name="subjects" type="text"placeholder="Тема сообщения"/> </p>
+        
+        <p> <div class="titles"></div><textarea name="message" cols="22" rows="5"  /></textarea></p><br>
+        <p><input id="submit" value="Отправить" type="submit" style="background-color: orange; " /></p>
+        </form>
+ 
+</div>
+
+
+
+
+</body>
+
+</html>

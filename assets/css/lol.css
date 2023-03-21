@@ -1,0 +1,89 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Montserrat, sans-serif;
+    background-image: url(../../Img/cam.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+a {
+    color: #7c9ab7;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+p {
+    margin: 10px 0;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    color: white;
+}
+
+input {
+    margin: 10px 0;
+    padding: 10px;
+    border: unset;
+    border-bottom: 2px solid #e3e3e3;
+    outline: none;
+    border-radius: 10px;
+}
+
+button {
+    margin-top: 35px;
+    padding: 10px;
+    background: #e3e3e3;
+    border: unset;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.msg {
+    border: 2px solid #ffa908;
+    border-radius: 3px;
+    padding: 10px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.logout {
+    color: #b7625c;
+}
+.auth{
+   
+}
+.control{
+    margin-left: auto;
+    margin-right: auto;
+    width: 420; 
+    text-align: center;
+    padding-top: 12%;
+    padding: 56px;
+    background: rgba( 0,0,0,.6);
+    border-radius: 10px;
+    align-items: center;
+}
+
+.regcontrol{
+    margin-left: auto;
+    margin-right: auto;
+    width: 420; 
+    text-align: center;
+    padding-top: 12%;
+    padding: 56px;
+    background: rgba( 0,0,0,.6);
+    border-radius: 10px;
+    align-items: center;
+}

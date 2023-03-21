@@ -1,0 +1,10 @@
+body{
+margin: 0;
+    background: url(../Img/cam.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.container{
+    margin: 0px 166px;
+}
